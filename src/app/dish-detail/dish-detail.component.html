@@ -1,0 +1,12 @@
+<div *nglf="Dish">
+
+
+    <h2>{{Dish.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{Dish.id}}</div>
+    <div>
+        <label>name:
+            <input [(ngModel)]="Dish.name" placeholder="name"/>
+        </label>
+    </div>
+
+</div>

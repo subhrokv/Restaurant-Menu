@@ -1,0 +1,24 @@
+<h2>Restaurant Dishes</h2>
+<u1 class="dishes">
+    <l1 *ngFor="let dish of dishes" 
+    [class.selected]="dish === selectedDish"
+    (click)="onSelect(dish)">
+        <span class="bagde">{{dish.id}}</span> {{dish.name}}
+    </l1>
+</u1>
+
+<app-dish-detail [dish]="selectedDish"></app-dish-detail>
+
+<div *nglf="selectedDish">
+
+
+    <h2>{{selectedDish.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedDish.id}}</div>
+    <div>
+        <label>name:
+            <input [(ngModel)]="selectedDish.name"
+placeholder="name"/>
+        </label>
+    </div>
+
+</div>
